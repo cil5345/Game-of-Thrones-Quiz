@@ -16,18 +16,49 @@
 
 <body>
 
-    
+
     <div class="container center" id="welcome-screen">
         <h1>Welcome to Westeros!</h1>
         <p>Answer all the questions to escape from the White Walkers. If the timer hits 0, you will be dead instantly
             and become part of the dead army. Keep in mind for every wrong answer, the timer will drop by 10 seconds.
             May the Gods be with you, the old ones and the new!</p>
         <button type="button" id="submit" class="btn-style btn btn-dark btn-lg">FIGHT!</button>
-        <div class="timer">this is for timer</div>
+
 
     </div>
 
+    <div class="container" id="quiz-container" style="visibility: hidden;">
+        <div class="card">
+            <div class="card-body">
+                <h1 id="choice-question"></h1>
+                <div class="row top-row">
+                    <div class="col-sm-6">
+                        <button type="button" class="btn btn-secondary btn-lg quiz-btn" id="choice-a">
+                            </button>
+                    </div>
+                    <div class="col-sm-6">
+                        <button type="button" class="btn btn-secondary btn-lg quiz-btn" id="choice-b">
+                            </button>
+                    </div>
 
+
+                </div>
+                <div class="row bottom-row">
+                    <div class="col-sm-6">
+                        <button type="button" class="btn btn-secondary btn-lg quiz-btn" id="choice-c"></button>
+                    </div>
+                    <div class="col-sm-6">
+                        <button type="button" class="btn btn-secondary btn-lg quiz-btn" id="choice-d"></button>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="timer"></div>
     <script src="myscripts.js"></script>
 </body>
 

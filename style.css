@@ -34,4 +34,27 @@ body {
     text-align: right;
     font-size: 18px;
 }
-position: absolute; top: 0; right: 0; width: 100px; text-align:right;
+
+#quiz-container {
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+  /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+    font-family: 'MedievalSharp', cursive;
+    color: black;
+}
+.quiz-btn {
+    width: 200px;
+}
+
+.bottom-row {
+    margin-top: 20px;
+}
+
+.top-row {
+    margin-top: 20px;
+}
+
+
