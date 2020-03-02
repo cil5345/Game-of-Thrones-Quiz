@@ -20,21 +20,21 @@ let gameOverContainer = document.getElementById("end-game");
 // ========================================================================
 var questions = [{
     q: "What is the name of King Joffery's valyrian steel sword?",
-    a: "a",
+    a: "Widow's Wail",
     c1: "Widow's Wail",
     c2: "Oath Keeper",
     c3: "Lion's Claw",
     c4: "Pointy"
 }, {
     q: "What is John Snow's real name?",
-    a: "c",
+    a: "Aegon Targaryen",
     c1: "Aerys Targaryen",
     c2: "John Stark",
     c3: "Aegon Targaryen",
     c4: "John Smith"
 }, {
     q: "Which is the worst season of Game of Thrones?",
-    a: "d",
+    a: "Season 8",
     c1: "Season 1",
     c2: "Season 6",
     c3: "Season 2",
@@ -70,44 +70,12 @@ mainSubmitButton.addEventListener("click", function loadQuestion() {
 
     }, 1000);
 
-    setQuestions();
+    setQuestions(0);
 
 
 
 
-    function setQuestions() {
-        var i = 0;
-        var objQues = questions[i];
-        var correctAnswer = objQues.a;
-        console.log(correctAnswer);
-        quizQuestion.textContent = objQues.q;
-        aAnswer.textContent = objQues.c1;
-        bAnswer.textContent = objQues.c2;
-        cAnswer.textContent = objQues.c3;
-        dAnswer.textContent = objQues.c4;
-
-        aAnswer.addEventListener('click', function () {
-            // console.log("hello")
-            console.log(objQues.c1);
-        });
-        bAnswer.addEventListener('click', function () {
-            // console.log("hello")
-            console.log(objQues.c2);
-        });
-        cAnswer.addEventListener('click', function () {
-            // console.log("hello")
-            console.log(objQues.c3);
-        });
-        dAnswer.addEventListener('click', function () {
-            // console.log("hello")
-            console.log(objQues.c4);
-        });
-
-
-        if (correctAnswer === true) {
-            console.log(correctAnswer);
-        }
-    }
+  
 
 
   
@@ -128,3 +96,46 @@ mainSubmitButton.addEventListener("click", function loadQuestion() {
 });
 
 // ========================================================================
+
+function setQuestions(i) {
+    // var i = 0;
+    var objQues = questions[i];
+    var correctAnswer = objQues.a;
+    console.log(correctAnswer);
+    quizQuestion.textContent = objQues.q;
+    aAnswer.textContent = objQues.c1;
+    bAnswer.textContent = objQues.c2;
+    cAnswer.textContent = objQues.c3;
+    dAnswer.textContent = objQues.c4;
+
+    aAnswer.addEventListener('click', function () {
+        // console.log("hello")
+        checkCorrectAnswer(objQues.c1);
+    });
+    bAnswer.addEventListener('click', function () {
+        // console.log("hello")
+        console.log(objQues.c2);
+    });
+    cAnswer.addEventListener('click', function () {
+        // console.log("hello")
+        console.log(objQues.c3);
+    });
+    dAnswer.addEventListener('click', function () {
+        // console.log("hello")
+        console.log(objQues.c4);
+    });
+
+
+    // if (correctAnswer === true) {
+    //     console.log(correctAnswer);
+    
+}
+
+function checkCorrectAnswer(chosenAnswer) {
+    console.log(chosenAnswer);
+    // console.log(correctAnswer);
+    if (chosenAnswer === correctAnswer) {
+        console.log("Fuckkkk")
+
+    }
+}
