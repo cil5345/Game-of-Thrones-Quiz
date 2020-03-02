@@ -1,9 +1,9 @@
 
 body {
-    background-image: url("file:///Users/chrislee/Desktop/code/homework/Game-of-Thrones-Quiz/images/game%20of%20thrones%20white%20walker.jpg");
+    background-image: url("images/game\ of\ thrones\ white\ walker.jpg");
     height: 100vh;
     cursor: url("http://www.rw-designer.com/cursor-extern.php?id=54286"), default;
-
+ 
     
 }
 
